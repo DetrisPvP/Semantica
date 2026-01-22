@@ -14,11 +14,19 @@ body {
 
 #header {
     background-color: #1f2d3d;
-    color: white;
-    padding: 50px 25px;
+    color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 15px 40px;   
+    z-index: 1000;
 }
 
 #logo {
@@ -105,12 +113,6 @@ body {
     background-color: #ffa41c;
     color: #111;
 }
-
-#btn-encontrar:hover,
-#btn-crear:hover {
-    filter: brightness(0.95);
-}
-
 
 #tipos-listas {
     margin-bottom: 40px;
@@ -233,7 +235,7 @@ body {
 #footer {
     background-color: #232f3e;
     color: white;
-    padding: 80px 800px 20px;
+    padding: 40px;
 }
 
 .footer-col {

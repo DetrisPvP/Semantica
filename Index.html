@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Inicio - Tienda Online</title>
     <link rel="stylesheet" href="index.css">
@@ -17,9 +18,10 @@
     <nav id="li">
         <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
-           <li><a href="#juguete">Juguetes</a></li>
-            <li><a href="Prime Video">Prime Video</a></li>
-            <li><a href="ofertas.html">Ofertas del día</a></li>
+           <li><a href="#Juguetes">Juguetes</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+         <li><a href="#mas-vendidos">Mas vendidos</a></li>
+            <li><a href="#Contacto">Contactos</a></li>
             <li><a href="listas.html">Listas</a></li>
             <li><a href="Tarjeta de Regalo.html">Tarjeta de Regalo</a></li>
             <li><a href="servicio-cliente.html">Servicio Al Cliente</a></li>
@@ -31,12 +33,17 @@
 <main id="contenido">
 
     <section id="imagenes">
-        <h2 id="titulo-banner">Hallazgos increíbles</h2>
-        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/JumpIn/49/Fuji_Jump_In_LATAM_Desktop_Single_image_1X._SY304_CB565472035_.jpg" id="classic" alt="Promociones destacadas">
-        <BR>
-            <br>
-        <p id="texto-banner">Descubre productos increíbles por menos de 3 USD.</p>
-    </section>
+    <video autoplay muted loop playsinline>
+        <source src="Precios bajos para ahorrar en grande y sonreír en grande.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+    </video>
+
+    <div class="contenido">
+        <h1>Hallazgos increíbles</h1>
+        <p>Descubre productos increíbles por menos de 3 USD.</p>
+    </div>
+</section>
+    
 
    
     <section id="categorias">
@@ -61,8 +68,8 @@
         </article>
     </section>
 
- 
-    <section id="mas-vendidos">
+<section id="mas-vendidos">
+
         <h2>Los más vendidos</h2>
 
         <article class="card">
@@ -81,24 +88,52 @@
         </article>
     </section>
 
-
-    <section id="juguete">
+    <section id="Juguetes">
         <h2>Juguetes</h2>
 
-        <article class="card juguete-item">
+        <article class="card">
             <img src="https://jumbo.com.do/pub/media/catalog/product/cache/e5145626c3f3275a7b4b1f65af9095fa/4/1/4102374-A_1.jpg" alt="Juguetes más vendido 1">
             <p>Juguetes más vendido 1</p>
         </article>
 
-        <article class="card juguete-item">
+        <article class="card">
             <img src="https://m.media-amazon.com/images/I/816quB7VMLL._AC_SL1500_.jpg" alt="Juguetes más vendido 2">
             <p>Juguetes más vendido 2</p>
         </article>
 
-        <article class="card juguete-item">
+        <article class="card">
             <img src="https://dam.elcorteingles.es/producto/www-001056610503841-00.jpg?impolicy=Resize&width=640&height=640" alt="Juguetes más vendido 3">
             <p>Juguetes más vendido 3</p>
         </article>
+    </section>
+
+    <section id="Contacto">
+          <form>
+            <div class="formulario">
+            <h2>¿Preguntas?</h2>
+            <p>Envíanos tus preguntas</p>
+                <label>Nombre</label>
+                <input type="text" placeholder="Tu nombre">
+
+                <label>Apellido</label>
+                <input type="text" placeholder="Tu apellido">
+
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="correo@ejemplo.com">
+
+                <label>Teléfono</label>
+                <input type="tel" placeholder="000-000-0000">
+
+                <label>Mensaje</label>
+                <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        </ul>
+    </section>
+
     </section>
 
 </main>
@@ -133,7 +168,7 @@
 
     <section id="footer-bottom">
         <p>© 2026 Amazon. Todos los derechos reservados.</p>
-        <a href="#head">Volver al inicio</a>
+        <a href="Index.html">Volver al inicio</a>
     </section>
 </footer>
 

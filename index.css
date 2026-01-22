@@ -2,33 +2,38 @@ html {
     scroll-behavior: smooth;
 }
 * {
-    margin: 0;
+margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
+   background-color: #eaeded;
+    color: #111;
 }
 
 
 #head {
     background-color: #1f2d3d;
     color: #fff;
-    padding: 50px 40px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
+    padding: 15px 40px;   
+    z-index: 1000;
+}
 #logo {
-    display: flex;
+   display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 20px;
 }
 
 #logo img {
@@ -36,9 +41,26 @@ body {
 }
 
 #logo a {
-    color: #f1c40f;
+    color: white;
     text-decoration: none;
+    font-size: 22px;
     font-weight: bold;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#menu a:hover {
+    color: #f3a847;
 }
 
 
@@ -61,19 +83,45 @@ body {
 
 
 #imagenes {
+    position: relative;
     height: 520px;
+    overflow: hidden;
+    color: white;
+}
+
+#imagenes video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+#imagenes::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background: linear-gradient(
         rgba(0, 26, 255, 0.5),
         rgba(78, 48, 160, 0.5)
-    ),
-    url("imagenes/banner-principal.jpg") center/cover no-repeat;
-    color: white;
+    );
+    z-index: 2;
+}
+
+#imagenes .contenido {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
     text-align: center;
 }
+
 
 #classic{
 position: sticky;
@@ -111,13 +159,13 @@ main section h2::after {
     margin: 10px auto 0;
 }
 
-
-#categorias,
-#mas-vendidos {
+#Juguetes,
+#categorias,#mas-vendidos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
+
 
 
 .card {
@@ -134,13 +182,13 @@ main section h2::after {
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 380px;
     object-fit: cover;
 }
 
 .card h3 {
     padding: 15px;
-    font-size: 18px;
+    font-size: 30px;
     color: #1f2d3d;
 }
 
@@ -151,7 +199,7 @@ main section h2::after {
 
 
 #juguete .juguete-item img {
-    height: 160px;
+    height: 400px;
     object-fit: contain;
     background-color: #fff;
     padding: 20px;
@@ -161,7 +209,7 @@ main section h2::after {
 #foot {
     background-color: #1f2d3d;
     color: #fff;
-    padding: 10px 930px;
+    padding: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
@@ -204,4 +252,76 @@ main section h2::after {
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #ffd814;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f7ca00;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.formulario {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.formulario h2 {
+    margin-bottom: 10px;
+}
+
+.formulario p {
+    margin-bottom: 20px;
+    color: #555;
+}
+@media (max-width: 768px) {
+
+    #li ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #1f2d3d;
+
+        flex-direction: column;
+        align-items: center;
+        display: none;
+
+        padding: 20px 0;
+    }
+
+    #li ul li a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
+#Juguetes, #categorias, #mas-vendidos, #Contacto {
+  scroll-margin-top: 190px; 
 }
