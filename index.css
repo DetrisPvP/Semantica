@@ -338,26 +338,34 @@ form label {
 }
 @media (max-width: 768px) {
 
-  #menu-icon {
+  #menu-icon{
     display: block;
   }
 
-  /* menú oculto por defecto */
-  #li ul {
-    display: none;
+  /* Menú cerrado (pero animable) */
+  #li ul{
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
     background-color: #1f2d3d;
+
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
     gap: 15px;
+
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    padding: 0;               /* cerrado */
+    transition: max-height .35s ease, opacity .35s ease, padding .35s ease;
   }
 
-  /* cuando el checkbox está marcado, se muestra */
-  #btn-menu:checked ~ #li ul {
-    display: flex;
+  /* Menú abierto */
+  #btn-menu:checked ~ #li ul{
+    max-height: 500px;        /* suficiente para tus links */
+    opacity: 1;
+    padding: 20px 0;          /* abierto */
   }
 }

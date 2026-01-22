@@ -254,8 +254,28 @@ form button:hover {
     gap: 15px;
   }
 
-  /* cuando el checkbox está marcado, se muestra */
-  #btn-menu:checked ~ #li ul {
-    display: flex;
-  }
+ #btn-menu:checked ~ #nav ul{
+    max-height:500px;
+    opacity:1;
+    padding:20px 0;
+ }
 }
+#nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background-color:#1f2d3d;
+
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+
+    overflow:hidden;
+    max-height:0;
+    opacity:0;
+    padding:0;
+
+    transition: max-height .35s ease, opacity .35s ease, padding .35s ease;
+    z-index:2000;
+  }
