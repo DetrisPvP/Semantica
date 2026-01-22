@@ -342,7 +342,7 @@ form label {
     display: block;
   }
 
-  /* Menú cerrado (pero animable) */
+
   #li ul{
     position: absolute;
     top: 70px;
@@ -358,14 +358,14 @@ form label {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    padding: 0;               /* cerrado */
+    padding: 0;               
     transition: max-height .35s ease, opacity .35s ease, padding .35s ease;
   }
 
-  /* Menú abierto */
+
   #btn-menu:checked ~ #li ul{
-    max-height: 500px;        /* suficiente para tus links */
+    max-height: 500px;      
     opacity: 1;
-    padding: 20px 0;          /* abierto */
+    padding: 20px 0;          
   }
 }
